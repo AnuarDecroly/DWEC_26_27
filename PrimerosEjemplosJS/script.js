@@ -1,3 +1,7 @@
+import Coche from "./Coche";
+
+const miCoche = new Coche("Hyundai", "granate");
+
 console.log("hola mundo");
 
 var a = 5;

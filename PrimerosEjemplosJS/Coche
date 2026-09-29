@@ -1,0 +1,36 @@
+class Coche {
+
+    #bastidor;
+
+    constructor(marca, color, bastidor = "") {
+        console.log("Soy un coche de la marca " + marca + " y el color " + color);
+        this.marca = marca;
+        this.color = color;
+        this.matricula = "";
+        this.encendido = false;
+        this.#bastidor = bastidor;
+    }
+
+    getBastidor() {
+        return this.#bastidor;
+    }
+
+    arrancar() {
+        this.encendido = true;
+    }
+
+}
+
+const miCoche = new Coche("Hyundai", "granate");
+miCoche.matricula = "3222DPZ";
+
+miCoche.nuevaPropiedad = "Soy nueva";
+miCoche.arrancar();
+
+console.log(miCoche);
+
+const cocheDos = new Coche("Toyota", "Negro", "QASDFGB77890");
+
+
+console.log(cocheDos.getBastidor());
+

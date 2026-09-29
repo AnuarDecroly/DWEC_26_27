@@ -1,1 +1,1 @@
-salida
+const miCoche = new Coche("Hyundai", "granate");
