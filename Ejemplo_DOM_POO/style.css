@@ -1,0 +1,24 @@
+body {
+    margin: 20dvb;
+    background-color: bisque;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+}
+
+.parrafo {
+    text-align: center;
+    font-size: 10 rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+}
+
+.btn {
+    padding: 10pt;
+    background-color: blue;
+    color: white;
+    border: 1px solid blueviolet;
+}
