@@ -1,0 +1,8 @@
+<p>Soy el primer componente</p>
+<p [class]="colores[5]">{{horaActual()}}</p>
+<p>{{colores[2]}}</p>
+<p [innerHTML]="listaColores()"></p>
+<button class="btn btn-danger p-3 m-5" [disabled]="estado">Click me</button>
+<a [href]="actualizarUrl()" target="_blank">Pincha aquí</a>
+
+<p [class.rojo]="stock" [class.verde]="descuento">Camisas</p>
