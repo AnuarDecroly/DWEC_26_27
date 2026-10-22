@@ -5,4 +5,19 @@
 <button class="btn btn-danger p-3 m-5" [disabled]="estado">Click me</button>
 <a [href]="actualizarUrl()" target="_blank">Pincha aquí</a>
 
-<p [class.rojo]="stock" [class.verde]="descuento">Camisas</p>
+<p [class.rojo]="stock" [class.verde]="descuento" [class.combinado]="clasesCombinadas()">Camisas</p>
+
+<button class="btn btn-secondary mt-5 me-3 p-3" (click)="sumar($event)">Sumar</button>
+<button class="btn btn-primary mt-5 me-3 p-3" (click)="reset()" [disabled]="isHabilitado">Reiniciar</button>
+<button class="btn btn-success mt-5 me-3 p-3" (click)="restar()">Restar</button>
+<div class="container d-flex">
+    <input class="mt-5 p-3" type="text" name="nombre" id="nombre" [(ngModel)]="miPersona.nombre">
+    <input (blur)="validarApellido()" class="mt-5 p-3" type="text" name="apellido" id="apellido"
+        [(ngModel)]="miPersona.apellido">
+    <input class="mt-5 p-3" type="text" name="dni" id="dni" [(ngModel)]="miPersona.dni">
+    <input (blur)="validarEdad()" class="mt-5 p-3" type="number" name="edad" id="edad" [(ngModel)]="miPersona.edad">
+</div>
+
+<div class="container">
+    <p class="mt-5">{{mostrarPersona()}}</p>
+</div>
