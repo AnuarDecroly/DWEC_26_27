@@ -1,0 +1,13 @@
+<section class="container">
+  <h1>Ejemplo Input en Angular</h1>
+  <hr>
+  <!-- Cargar un componente -->
+  <app-deporte-component [deporte]="miDeporte" [color]="miColor" (cuentaAtrasComenzada)="comenzar($event)"
+    (cuentaAtrasTerminada)="terminar($event)"></app-deporte-component>
+  <hr>
+  <app-deporte-component [sport]="miSport" (cuentaAtrasComenzada)="comenzar($event)"
+    (cuentaAtrasTerminada)="terminar($event)"></app-deporte-component>
+  <hr>
+  <app-deporte-component [deporte]="miDeporte" [color]="miColor" [sport]="miSport"
+    (cuentaAtrasComenzada)="comenzar($event)" (cuentaAtrasTerminada)="terminar($event)"></app-deporte-component>
+</section>

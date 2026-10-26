@@ -1,0 +1,24 @@
+<section class="container">
+    <div class="d-flex flex-column">
+        <div class="input-group">
+            <label class="me-5" for="aficion">Afición</label>
+            <input type="text" name="aficion" id="aficion" placeholder="Introduce una afición"
+                [(ngModel)]="newAfficion.aficion">
+        </div>
+        <br>
+        <div class="input-group">
+            <label class="me-5" for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Introduce el nombre"
+                [(ngModel)]="newAfficion.nombre">
+        </div>
+        <br>
+        <div class="d-flex">
+            <button class="btn btn-primary" (click)="guardarDatos()">Guardar</button>
+        </div>
+    </div>
+
+    <hr>
+    <div class="container" [innerHTML]="cargarDatos()">
+
+    </div>
+</section>
