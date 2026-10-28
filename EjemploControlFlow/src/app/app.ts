@@ -15,6 +15,6 @@ export class App {
     ejemploActivo: string;
 
     constructor() {
-        this.ejemploActivo = "case";
+        this.ejemploActivo = "for";
     }
 }
