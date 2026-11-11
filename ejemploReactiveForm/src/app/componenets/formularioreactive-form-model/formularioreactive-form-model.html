@@ -1,0 +1,76 @@
+<form [formGroup]="modelForm" class="card p-3 shadow" (ngSubmit)="getDataForm()">
+    <div class="mt-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Introduce tu nombre"
+            formControlName="nombre">
+        @if(checkControl('nombre','required')){
+        <p class="error">Campo requerido</p>
+        }
+        @if(checkControl('nombre','minlength')){
+        <p class="error">El nombre debe de tener al menos 3 caracteres</p>
+        }
+    </div>
+
+    <div class="mt-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" name="email" id="email" class="form-control" placeholder="Introduce tu Email"
+            formControlName="email">
+        @if(checkControl('email','required')){
+        <p class="error">Campo requerido</p>
+        }
+        @if(checkControl('email','pattern')){
+        <p class="error">El email no tiene el formato correcto</p>
+        }
+    </div>
+
+    <div class="mt-3">
+        <label for="edad" class="form-label">Edad</label>
+        <input type="number" name="edad" id="edad" class="form-control" placeholder="Introduce tu edad"
+            formControlName="edad">
+        @if(checkControl('edad','required')){
+        <p class="error">Campo requerido</p>
+        }
+        @if(checkControl('edad','min') || checkControl('edad','max')){
+        <p class="error">La edad debe de tener un valor entre 0 y 120</p>
+        }
+    </div>
+
+    <div class="mt-3">
+        <label for="dni" class="form-label">DNI</label>
+        <input type="text" name="dni" id="dni" class="form-control" placeholder="Introduce tu DNI"
+            formControlName="dni">
+        @if(checkControl('dni','required')){
+        <p class="error">Campo requerido</p>
+        }
+        @if(checkControl('dni','pattern')){
+        <p class="error">El DNI no tiene el formato correcto</p>
+        }
+    </div>
+
+    <div class="mt-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" id="password" class="form-control" formControlName="password">
+        @if(checkControl('password','required')){
+        <p class="error">Campo requerido</p>
+        }
+        @if(checkControl('password','minlength')){
+        <p class="error">La contraseña debe de tener al menos 5 caracteres</p>
+        }
+    </div>
+
+    <div class="mt-3">
+        <label for="repitePassword" class="form-label">Password</label>
+        <input type="password" name="repitePassword" id="repitePassword" class="form-control"
+            formControlName="repitePassword">
+        @if(checkControl('repitePassword','required')){
+        <p class="error">Campo requerido</p>
+        }
+        @if(checkControl('repitePassword','minlength')){
+        <p class="error">La contraseña debe de tener al menos 5 caracteres</p>
+        }
+        @if(modelForm.hasError('passwordnotmatches')){
+        <p class="error">Las contraseñas no coinciden</p>
+        }
+    </div>
+    <input type="submit" value="Enviar" [disabled]="!modelForm.valid" class="btn btn-success mt-5">
+</form>
