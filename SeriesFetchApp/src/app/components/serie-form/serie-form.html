@@ -1,0 +1,45 @@
+<section class="container">
+    <h1>Insertar nueva serie</h1>
+    <hr>
+
+    <form [formGroup]="serieForm" class="card p-3 shadow" (ngSubmit)="getDataForm()">
+        <div class="my-2">
+            <label for="title" class="form-label mt-lg-3">Titulo</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Introduce el titulo"
+                formControlName="title">
+        </div>
+
+        <div class="my-2">
+            <label for="creator" class="form-label mt-lg-3">Creador</label>
+            <input type="text" class="form-control" name="creator" id="creator" placeholder="Introduce el creador"
+                formControlName="creator">
+        </div>
+
+        <div class="my-2">
+            <label for="rating" class="form-label mt-lg-3">Puntuacion</label>
+            <input type="number" class="form-control" name="rating" id="rating" placeholder="Introduce la puntuacion"
+                formControlName="rating">
+        </div>
+
+        <div class="my-2">
+            <label for="dates" class="form-label mt-lg-3">Fecha de emision</label>
+            <input type="text" class="form-control" name="dates" id="dates"
+                placeholder="Introduce las fechas de emision" formControlName="dates">
+        </div>
+
+        <div class="my-2">
+            <label for="image" class="form-label mt-lg-3">Imagen</label>
+            <input type="text" class="form-control" name="image" id="image" placeholder="Introduce el link de la imagen"
+                formControlName="image">
+        </div>
+
+        <div class="my-2">
+            <label for="channel" class="form-label mt-lg-3">Canal de emision</label>
+            <input type="text" class="form-control" name="channel" id="channel"
+                placeholder="Introduce el canal de emision" formControlName="channel">
+        </div>
+
+        <input type="submit" value="Guardar" class="btn btn-success mt-5" [disabled]="!serieForm.valid">
+
+    </form>
+</section>
