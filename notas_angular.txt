@@ -1,0 +1,25 @@
+//Ruta donde alojar los proyecto en el repositorios
+cd /c/Users/ANUAR/Documents/GITHUB/DWEC_26_27
+
+//Crear proyecto en Angular
+ng new "PrimeraAppAngular" --skip-tests
+
+//Entrar en la ruta del proyecto
+cd PrimeraAppAngular/
+
+//Abrimos VS con la carpeta cargada
+code .
+
+//Instalamos Bootstrap
+npm install bootstrap
+
+
+//Modificar en el angular.json
+"styles": ["src/styles.css","node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+"scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
+
+//Crear componente
+ng g c components/componente-hijo2 --skip-tests
+
+
