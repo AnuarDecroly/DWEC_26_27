@@ -6,9 +6,11 @@ import { SERVICIOSPROFESIONALES } from '../../db/serviciosProfesionales.db';
 export class ServiceProfesionales {
 
     private arrServiciosProfesionales: IserviciosProfesionales[];
+    private arrEmails: string[];
 
     constructor() {
         this.arrServiciosProfesionales = SERVICIOSPROFESIONALES;
+        this.arrEmails = [];
     }
 
     getAllServiciosProfesionales(): IserviciosProfesionales[] {
@@ -33,5 +35,9 @@ export class ServiceProfesionales {
 
         return servicioProfesional;
 
+    }
+
+    registrarEmail(email: string) {
+        this.arrEmails.push(email);
     }
 }

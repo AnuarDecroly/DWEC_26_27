@@ -1,0 +1,69 @@
+<main class="nf d-flex align-items-center min-vh-100 py-5 position-relative overflow-hidden">
+  <div class="nf-grid" aria-hidden="true"></div>
+  <div class="nf-glow" aria-hidden="true"></div>
+
+  <div class="container position-relative">
+    <div class="row align-items-center g-5">
+
+      <!-- Texto -->
+      <div class="col-lg-5 text-center text-lg-start">
+        <span class="badge rounded-pill nf-eyebrow mb-4">
+          <span class="nf-status"></span>
+          Error 404 · Página no encontrada
+        </span>
+
+        <h1 class="nf-title mb-3" data-text="404">404</h1>
+
+        <p class="lead nf-lead mb-4">
+          Hemos revisado el código línea por línea y esta página no aparece en el build.
+          Ni en <code>main</code>, ni en <code>develop</code>, ni en ninguna rama.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-4">
+          <a routerLink="/" class="btn btn-lg nf-btn-primary">
+            Volver al inicio <span aria-hidden="true">→</span>
+          </a>
+          <a routerLink="/contacto" class="btn btn-lg nf-btn-ghost">
+            Reportar el bug
+          </a>
+        </div>
+
+        <p class="small nf-help mb-0">
+          ¿Buscabas algo concreto? Echa un vistazo a nuestros
+          <a routerLink="/servicios">servicios</a> o a los
+          <a routerLink="/proyectos">últimos proyectos</a>.
+        </p>
+      </div>
+
+      <!-- Editor -->
+      <div class="col-lg-7">
+        <div class="nf-editor shadow-lg">
+          <div class="nf-editor-bar d-flex align-items-center gap-2 px-3 py-2">
+            <span class="nf-dot nf-dot-red"></span>
+            <span class="nf-dot nf-dot-yellow"></span>
+            <span class="nf-dot nf-dot-green"></span>
+            <span class="nf-tab ms-2">app.routes.ts</span>
+            <span class="badge nf-problem ms-auto">1 problema</span>
+          </div>
+
+          <pre class="nf-code mb-0" aria-hidden="true"><code><span class="ln">1</span><span class="kw">export const</span> routes: <span class="ty">Routes</span> = [
+<span class="ln">2</span>  &#123; path: <span class="str">''</span>, component: <span class="ty">HomeComponent</span> &#125;,
+<span class="ln">3</span>  &#123; path: <span class="str">'servicios'</span>, component: <span class="ty">ServiciosComponent</span> &#125;,
+<span class="ln">4</span>  &#123; path: <span class="str">'proyectos'</span>, component: <span class="ty">ProyectosComponent</span> &#125;,
+<span class="ln ln-error">5</span><span class="line-error">  &#123; path: <span class="str squiggle">'esta-pagina'</span>, component: <span class="cm">/* ¿¿?? */</span> &#125;,</span>
+<span class="ln">6</span>  &#123; path: <span class="str">'**'</span>, component: <span class="ty">NotFoundComponent</span> &#125;,
+<span class="ln">7</span>];</code></pre>
+
+          <div class="nf-console" role="log">
+            <p class="nf-line nf-line-cmd"><span class="nf-prompt">$</span> ng serve --open /esta-pagina</p>
+            <p class="nf-line nf-line-info">Compilando componentes... 100%</p>
+            <p class="nf-line nf-line-error">RouteNotFoundError: "/esta-pagina" no está definida en app.routes.ts</p>
+            <p class="nf-line nf-line-info">Pista: puede que la página se haya movido o que el enlace tenga un typo.</p>
+            <p class="nf-line nf-line-success">✔ Hotfix sugerido: volver a la página de inicio<span class="nf-cursor" aria-hidden="true"></span></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>

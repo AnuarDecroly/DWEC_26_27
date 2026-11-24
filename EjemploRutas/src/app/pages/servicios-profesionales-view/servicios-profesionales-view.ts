@@ -13,10 +13,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ServiciosProfesionalesView {
     miServicioProfesional !: IserviciosProfesionales;
-    private miServicio = inject(ServiceProfesionales);
-    activatedRoute = inject(ActivatedRoute);
 
-    router = inject(Router);
+    private miServicio = inject(ServiceProfesionales);
+    private activatedRoute = inject(ActivatedRoute);
+    private router = inject(Router);
 
     ngOnInit(): void {
         this.activatedRoute.params.subscribe((params: any) => {

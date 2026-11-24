@@ -1,1 +1,234 @@
-<p>contacto works!</p>
+<main class="ct position-relative overflow-hidden py-5">
+    <div class="ct-grid" aria-hidden="true"></div>
+    <div class="ct-glow ct-glow-1" aria-hidden="true"></div>
+    <div class="ct-glow ct-glow-2" aria-hidden="true"></div>
+
+    <div class="container position-relative py-lg-5">
+
+        <!-- Cabecera -->
+        <header class="text-center mb-5">
+            <span class="badge rounded-pill ct-eyebrow mb-4">
+                <span class="ct-status"></span>
+                Disponibles para nuevos proyectos
+            </span>
+            <h1 class="ct-title mb-3">
+                Hablemos de tu <span class="ct-gradient">próximo proyecto</span>
+            </h1>
+            <p class="lead ct-lead mx-auto mb-0">
+                Cuéntanos qué tienes en mente. Revisamos cada mensaje en menos de 24&nbsp;h
+                y te respondemos con una propuesta, no con una plantilla.
+            </p>
+        </header>
+
+        <div class="row g-4 g-lg-5">
+
+            <!-- Información de contacto -->
+            <aside class="col-lg-5">
+                <div class="d-flex flex-column gap-3">
+
+                    <a href="mailto:hola&#64;nexodev.es" class="ct-info-card text-decoration-none">
+                        <span class="ct-icon" aria-hidden="true">&lt;/&gt;</span>
+                        <div>
+                            <p class="ct-info-label mb-1">Email</p>
+                            <p class="ct-info-value mb-0">hola&#64;nexodev.es</p>
+                        </div>
+                    </a>
+
+                    <a href="tel:+34910000000" class="ct-info-card text-decoration-none">
+                        <span class="ct-icon" aria-hidden="true">#</span>
+                        <div>
+                            <p class="ct-info-label mb-1">Teléfono</p>
+                            <p class="ct-info-value mb-0">+34 910 000 000</p>
+                        </div>
+                    </a>
+
+                    <div class="ct-info-card">
+                        <span class="ct-icon" aria-hidden="true">~/</span>
+                        <div>
+                            <p class="ct-info-label mb-1">Oficina</p>
+                            <p class="ct-info-value mb-0">Calle del Código 42, 28001 Madrid</p>
+                        </div>
+                    </div>
+
+                    <!-- Mini terminal con horario -->
+                    <div class="ct-terminal">
+                        <div class="ct-editor-bar d-flex align-items-center gap-2 px-3 py-2">
+                            <span class="ct-dot ct-dot-red"></span>
+                            <span class="ct-dot ct-dot-yellow"></span>
+                            <span class="ct-dot ct-dot-green"></span>
+                            <span class="ct-tab ms-2">horario.sh</span>
+                        </div>
+                        <div class="ct-console">
+                            <p class="ct-line"><span class="ct-prompt">$</span> nexo --horario</p>
+                            <p class="ct-line ct-line-info">Lunes a jueves ··· 09:00 – 18:00</p>
+                            <p class="ct-line ct-line-info">Viernes ········· 09:00 – 15:00</p>
+                            <p class="ct-line ct-line-success">✔ Tiempo medio de respuesta: 4 h<span class="ct-cursor"
+                                    aria-hidden="true"></span></p>
+                        </div>
+                    </div>
+
+                    <!-- Redes -->
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="#" class="btn ct-btn-ghost btn-sm">GitHub</a>
+                        <a href="#" class="btn ct-btn-ghost btn-sm">LinkedIn</a>
+                        <a href="#" class="btn ct-btn-ghost btn-sm">Dribbble</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Formulario -->
+            <section class="col-lg-7">
+                <div class="ct-editor shadow-lg">
+                    <div class="ct-editor-bar d-flex align-items-center gap-2 px-3 py-2">
+                        <span class="ct-dot ct-dot-red"></span>
+                        <span class="ct-dot ct-dot-yellow"></span>
+                        <span class="ct-dot ct-dot-green"></span>
+                        <span class="ct-tab ms-2">nuevo-proyecto.form.ts</span>
+                        <span class="badge ct-saved ms-auto">● sin guardar</span>
+                    </div>
+
+                    <form class="p-4 p-md-5" novalidate>
+                        <p class="ct-comment mb-4">// Rellena los campos y haz push. Nosotros hacemos el merge.</p>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nombre" class="form-label ct-label">nombre <span
+                                        class="ct-req">*</span></label>
+                                <input type="text" id="nombre" name="nombre" class="form-control ct-input"
+                                    placeholder="Ada Lovelace" autocomplete="name" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="email" class="form-label ct-label">email <span
+                                        class="ct-req">*</span></label>
+                                <input type="email" id="email" name="email" class="form-control ct-input"
+                                    placeholder="ada&#64;empresa.com" autocomplete="email" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="empresa" class="form-label ct-label">empresa</label>
+                                <input type="text" id="empresa" name="empresa" class="form-control ct-input"
+                                    placeholder="Opcional" autocomplete="organization">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="presupuesto" class="form-label ct-label">presupuesto</label>
+                                <select id="presupuesto" name="presupuesto" class="form-select ct-input">
+                                    <option value="" selected>Selecciona un rango</option>
+                                    <option value="menos-5k">Menos de 5.000 €</option>
+                                    <option value="5k-15k">5.000 € – 15.000 €</option>
+                                    <option value="15k-40k">15.000 € – 40.000 €</option>
+                                    <option value="mas-40k">Más de 40.000 €</option>
+                                </select>
+                            </div>
+
+                            <!-- Tipo de proyecto como chips -->
+                            <div class="col-12">
+                                <span class="form-label ct-label d-block mb-2">tipo de proyecto</span>
+                                <div class="d-flex flex-wrap gap-2" role="group" aria-label="Tipo de proyecto">
+                                    <input type="radio" class="btn-check" name="tipo" id="tipo-web" value="web" checked>
+                                    <label class="btn ct-chip" for="tipo-web">Web corporativa</label>
+
+                                    <input type="radio" class="btn-check" name="tipo" id="tipo-ecommerce"
+                                        value="ecommerce">
+                                    <label class="btn ct-chip" for="tipo-ecommerce">E-commerce</label>
+
+                                    <input type="radio" class="btn-check" name="tipo" id="tipo-app" value="app">
+                                    <label class="btn ct-chip" for="tipo-app">Aplicación web</label>
+
+                                    <input type="radio" class="btn-check" name="tipo" id="tipo-api" value="api">
+                                    <label class="btn ct-chip" for="tipo-api">API / Backend</label>
+
+                                    <input type="radio" class="btn-check" name="tipo" id="tipo-otro" value="otro">
+                                    <label class="btn ct-chip" for="tipo-otro">Otro</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="mensaje" class="form-label ct-label">mensaje <span
+                                        class="ct-req">*</span></label>
+                                <textarea id="mensaje" name="mensaje" rows="5" class="form-control ct-input"
+                                    placeholder="Cuéntanos tu idea, plazos, referencias que te gusten..."
+                                    required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input ct-check" type="checkbox" id="privacidad"
+                                        name="privacidad" required>
+                                    <label class="form-check-label ct-help" for="privacidad">
+                                        Acepto la <a routerLink="/privacidad">política de privacidad</a> y el
+                                        tratamiento de mis datos.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 d-flex flex-column flex-sm-row align-items-sm-center gap-3 pt-2">
+                                <button type="submit" class="btn btn-lg ct-btn-primary">
+                                    git push --mensaje <span aria-hidden="true">→</span>
+                                </button>
+                                <span class="ct-help small">Sin spam. Solo te escribiremos sobre tu proyecto.</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Preguntas frecuentes -->
+        <section class="mt-5 pt-lg-4">
+            <h2 class="ct-subtitle text-center mb-4">
+                <span class="ct-prompt">&gt;</span> preguntas frecuentes
+            </h2>
+
+            <div class="accordion ct-accordion mx-auto" id="faqContacto">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                            ¿Cuánto tarda en estar lista una web?
+                        </button>
+                    </h3>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqContacto">
+                        <div class="accordion-body">
+                            Una web corporativa suele estar lista en 3–5 semanas. Proyectos más grandes se dividen
+                            en sprints de dos semanas con entregas que puedes probar desde el principio.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                            ¿Qué tecnologías utilizáis?
+                        </button>
+                    </h3>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqContacto">
+                        <div class="accordion-body">
+                            Trabajamos principalmente con Angular y TypeScript en el frontend, Node.js y bases de datos
+                            SQL en el backend, y desplegamos en la nube con integración continua.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                            ¿Ofrecéis mantenimiento después del lanzamiento?
+                        </button>
+                    </h3>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqContacto">
+                        <div class="accordion-body">
+                            Sí. Todos los proyectos incluyen tres meses de soporte y después puedes contratar un plan
+                            de mantenimiento mensual con actualizaciones, copias de seguridad y mejoras.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>

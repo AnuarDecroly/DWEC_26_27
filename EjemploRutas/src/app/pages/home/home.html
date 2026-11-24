@@ -3,8 +3,8 @@
         <div class="text-center">
             <h1>Bienvenidos a nuestra empresa de Desarrollo Web y automatización con magIA</h1>
             <p>Ofrecemos nuestros servicios full-stack</p>
-            <a href="" class="btn btn-secondary me-3">Nuestros servicios</a>
-            <a href="" class="btn btn-danger">Contacto</a>
+            <a class="btn btn-secondary me-3" [routerLink]="['/servicios']">Nuestros servicios</a>
+            <a class="btn btn-warning" [routerLink]="['/contacto']">Contacto</a>
 
             <form #suscribeForm="ngForm" (submit)="getSuscribe(suscribeForm)">
                 <div class="d-flex mt-3 gap-2">
